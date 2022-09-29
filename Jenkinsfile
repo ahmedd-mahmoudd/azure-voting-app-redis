@@ -22,7 +22,7 @@ pipeline {
       stage('Start test app') {
          steps {
             sh(script: """
-               dockercompose up -d
+               docker compose up -d
                
             """)
          }
