@@ -14,6 +14,7 @@ pipeline {
                cd azure-vote/
                docker images -a
                docker build -t jenkins-pipeline .
+               curl -SL https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
                docker images -a
                cd ..
             """)
